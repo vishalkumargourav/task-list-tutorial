@@ -45,7 +45,7 @@ export const updateTasks = async ({ id, name, completed }) => {
 
   const command = new UpdateCommand({
     TableName: "Tasks",
-    key: {
+    Key: {
       id,
     },
     ExpressionAttributeNames: {
