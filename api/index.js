@@ -51,7 +51,7 @@ app.delete("/task/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
-    const response = await deleteTasks(task);
+    const response = await deleteTasks(id);
     res.send(response);
   } catch (err) {
     res.status(400).send(`Error deleting tasks: ${err}`);
