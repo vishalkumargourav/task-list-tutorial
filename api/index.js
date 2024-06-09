@@ -27,7 +27,7 @@ app.get("/task", async (req, res) => {
 
 app.post("/task", async (req, res) => {
   try {
-    const tasks = req.body;
+    const task = req.body;
 
     const response = await createTasks(task);
     res.send(response);
