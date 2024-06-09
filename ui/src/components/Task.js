@@ -32,7 +32,7 @@ export const Task = ({ task, fetchTasks }) => {
 
       await fetchTasks();
     } catch (error) {
-      console.log(err);
+      console.log(error);
     }
   };
 
@@ -59,6 +59,7 @@ export const Task = ({ task, fetchTasks }) => {
         </Button>
       </div>
       <UpdateTaskForm
+        fetchTasks={fetchTasks}
         isDialogueOpen={isDialogueOpen}
         setIsDialogueOpen={setIsDialogueOpen}
         task={task}
