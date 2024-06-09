@@ -53,7 +53,7 @@ export const Task = ({ task, fetchTasks }) => {
         <Button
           color="error"
           variant="contained"
-          onClick={() => handleDeleteTask}
+          onClick={handleDeleteTask}
         >
           <DeleteIcon />
         </Button>
