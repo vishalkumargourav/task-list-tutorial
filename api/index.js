@@ -38,9 +38,9 @@ app.post("/task", async (req, res) => {
 
 app.put("/task", async (req, res) => {
   try {
-    const tasks = req.body;
+    const task = req.body;
 
-    const response = await deleteTasks(id);
+    const response = await updateTasks(task);
     res.send(response);
   } catch (err) {
     res.status(400).send(`Error updating tasks: ${err}`);
