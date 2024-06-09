@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchTasks, createTasks, updateTasks, deleteTasks } from "./task";
+import { fetchTasks, createTasks, updateTasks, deleteTasks } from "./task.js";
 import serverless from "serverless-http";
 import cors from "cors";
 

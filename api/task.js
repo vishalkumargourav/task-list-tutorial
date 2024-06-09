@@ -8,7 +8,7 @@ import {
 } from "@aws-sdk/lib-dynamodb";
 import crypto from "crypto";
 
-const client = newDynamoDBClient({ region: "us-west-1" });
+const client = new DynamoDBClient({ region: "ap-south-1" });
 const docClient = DynamoDBDocumentClient.from(client);
 
 export const fetchTasks = async () => {
@@ -18,7 +18,7 @@ export const fetchTasks = async () => {
     TableName: "Tasks",
   });
 
-  const response = await docClient(command);
+  const response = await docClient.send(command);
   return response;
 };
 
@@ -33,7 +33,7 @@ export const createTasks = async ({ name, completed }) => {
     },
   });
 
-  const response = await docClient(command);
+  const response = await docClient.send(command);
   return response;
 };
 
@@ -54,7 +54,7 @@ export const updateTasks = async ({ id, name, completed }) => {
     ReturnValues: "ALL_NEW",
   });
 
-  const response = await docClient(command);
+  const response = await docClient.send(command);
   return response;
 };
 
@@ -65,6 +65,6 @@ export const deleteTasks = async (id) => {
         id
     }
   });
-  const response = await docClient(command);
+  const response = await docClient.send(command);
   return response;
 };
