@@ -25,7 +25,7 @@ app.get("/task", async (req, res) => {
   }
 });
 
-app.get("/task", async (req, res) => {
+app.post("/task", async (req, res) => {
   try {
     const tasks = req.body;
 
@@ -36,7 +36,7 @@ app.get("/task", async (req, res) => {
   }
 });
 
-app.get("/task", async (req, res) => {
+app.put("/task", async (req, res) => {
   try {
     const tasks = req.body;
 
