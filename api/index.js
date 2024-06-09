@@ -39,6 +39,7 @@ app.post("/task", async (req, res) => {
 app.put("/task", async (req, res) => {
   try {
     const task = req.body;
+    console.log("task update", task);
 
     const response = await updateTasks(task);
     res.send(response);

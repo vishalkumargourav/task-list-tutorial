@@ -38,6 +38,11 @@ export const createTasks = async ({ name, completed }) => {
 };
 
 export const updateTasks = async ({ id, name, completed }) => {
+  console.log("update id", id)
+
+  console.log("update name", name)
+  console.log("update completed", completed)
+
   const command = new UpdateCommand({
     TableName: "Tasks",
     key: {
